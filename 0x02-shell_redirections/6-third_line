@@ -1,2 +1,2 @@
 #!/bin/bash
-less lacta | head -n 3|tail -1
+less iacta | head -n 3|tail -1
