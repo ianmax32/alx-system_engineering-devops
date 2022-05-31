@@ -1,2 +1,2 @@
 #!/bin/bash
-echo -e $((2#BINARY))
+printf "%x\n" $((2#BINARY))
