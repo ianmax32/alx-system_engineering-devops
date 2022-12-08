@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# this script displays all IPV4 IPs
+
+/sbin/ifconfig eth0 | grep 'inet addr' | cut -d: -f2 | awk '{print $1}'
+/sbin/ifconfig 1o | grep 'inet addr' | cut -d: -f2 | awk '{print $1}'
