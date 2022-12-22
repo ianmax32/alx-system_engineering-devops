@@ -8,5 +8,5 @@ sudo apt update
 sudo apy install -y haproxy=2.0.\*
 config_lb="\\\nfrontend load_Balancer\n \tbind *:80\n \tmode http\n \tdefault_backend web_servers\n"
 wservs="\\nbackend web_servers\n \tbalance roundrobin\n \tserver 49282-web-01 52.86.166.122:80 check\n \tserver 49282-web-02 100.25.139.100:80 check\n"
-echo -e "$config_lb" | sudo tee --append /etc/haproxy/haproxy.cfg
+sudo sed -i "\$a $config_lb\n$wservs" /etc/haproxy/haproxy.cfg
 sudo service haproxy restart
