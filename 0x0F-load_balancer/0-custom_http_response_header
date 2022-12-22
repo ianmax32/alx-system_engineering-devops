@@ -7,5 +7,5 @@ echo 'Hello World!' | sudo tee /usr/share/nginx/html/index.html
 link_red="\\\trewrite ^/redirect_me https://masagaian.web.app/;\n"
 sudo sed -i "37i $link_red" /etc/nginx/sites-enabled/default
 header_cust="\\\tadd_header X-Served-By: \$hostname;\n"
-sudo sed -i "17i header_cust" /etc/nginx/nginx.conf
+sudo sed -i "17i $header_cust" /etc/nginx/nginx.conf
 sudo service nginx start
