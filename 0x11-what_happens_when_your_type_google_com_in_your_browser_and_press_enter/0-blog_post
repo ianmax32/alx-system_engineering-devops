@@ -1,0 +1,21 @@
+What happens when you type www.google.com in your browser and press enter?
+
+This is a usual process that many users of the internet do every time they use the internet. Although this process is abstracted from the typical user, it is really important to know how your computer communicates with other computers on the internet. Now remember, what is the definition of the internet? According to JavaPoint, the Internet is a network that is globally distributed and allows computers to connect and talk to each other using the World Wide Web, (https://www.javatpoint.com/internet). By this definition, the user only knows that their computer is connected to the internet and they would be able to search and get the results that they want. The main question is how does a user type a URL (Universal Resource Locator) on the browser, press enter and get the results?
+
+To answer this question, a series of steps take place from when the user presses enter on their keyboard. But before we get into the steps, let us explain what a URL is in more detail.
+
+URL- This stands for Universal Resource Locator and it is a mechanism used to retrieve published resources on the web by browsers. A URL is made up of different parts, some are mandatory parts and some are optional, An example of a URL is https://www.google.com/: This is made up of 
+A scheme (https): this is the first part of a URL and it indicates a protocol that the browser must use when requesting for a resource and it is a set method for transferring and exchanging data on a computer network. The HTTP on the scheme stands for HyperText Transfer Protocol and websites use this protocol for communication between different systems. HTTPS on the other hand, is just a secured version of HTTP with S standing for Secure as it uses TLS (SSL) to encrypt the normal request and responses of http. TSL stands for Transport Layer Security and it is an encryption protocol that evolved from SSL (Secure Sockets Layer), (cloudflare, 2022).
+
+Domain Name: www.google.com is called the domain name of the URL and it indicates the requested web server. Other parts of the URL that are mandatory
+
+When you press enter what happens next?
+The browser does a process called DNS lookup which will allow it to get information on how to reach the server. DNS stands for Domain Name System and it is a distributed naming system for computers, resources and other services on the internet. The lookup process consists of the browser checking for the IP/Domain name in the DNS Cache and if it is not there, the browser asks the operating system which also has a DNS Cache for it. If the operating system does not have it, a query is made by the operating system to the internet to a DNS Resolver. DNS Resolver is a server that converts domain names into IP addresses on the internet and it does this recursively until it finds the IP address. And sends the IP address to the browser that requested it.
+When the browser has the IP address, it establishes a TCP connection with the web server. TCP stands for Transmission Control Protocol and this is a standard used for the exchange of data on a computer network between different devices in both directions. Before the transfer of data, a three way handshake is done before establishing a valid connection.
+Once the connection is established, the browser sends an http request to the server
+The server sends back a response to the browser and you get back the google site to search.
+
+
+	
+References
+Cloudflare, 2022. Why is HTTP not secure? | HTTP vs. HTTPS. https://www.cloudflare.com/learning/ssl/why-is-http-not-secure/.
