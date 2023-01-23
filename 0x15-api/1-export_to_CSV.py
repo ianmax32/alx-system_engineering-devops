@@ -25,4 +25,8 @@ if __name__ == "__main__":
             with open('{}.csv'.format(emp_id, mode='w+')) as fw:
                 writer = csv.writer(fw, delimeter=', ', quoting=csv.QUOTE_ALL)
                 for i in tasks_done:
-                    writer.writerow([i['userId'], emp_name, i['completed'], i['title']])
+                    writer.writerow(
+                            [i['userId'],
+                             emp_name,
+                             i['completed'],
+                             i['title']])
