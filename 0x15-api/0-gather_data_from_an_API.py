@@ -3,8 +3,8 @@
 this script uses REST API to return information about
 his/her TODO list progress given an employee id
 """
-import sys
 import requests
+import sys
 
 if __name__ == "__main__":
     emp_id = sys.argv[1]
