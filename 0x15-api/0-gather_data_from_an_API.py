@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 this script uses REST API to return information about
 his/her TODO list progress given an employee id
@@ -17,7 +17,7 @@ if __name__ == "__main__":
     tasks = resp_todo.json()
     tasks_done = []
     num_tasks = 0
-    
+
     for a in tasks:
         if a.get('userId') == int(emp_id):
             num_tasks += 1
