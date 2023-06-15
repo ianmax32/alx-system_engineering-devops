@@ -8,14 +8,15 @@ the function should return 0.
 
 from requests import get
 
+
 def number_of_subscribers(subreddit):
     """
     this fun is for num of suscribers
     """
     url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
-    header = {"user-agent":"ianmax"}
+    header = {"user-agent": "ianmax"}
     try:
-        requ = get(url,headers=header).json()
+        requ = get(url, headers=header).json()
         num = requ["data"]["subscribers"]
         return num
     except Exception:
