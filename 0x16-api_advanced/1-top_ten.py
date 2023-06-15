@@ -15,7 +15,7 @@ def top_ten(subreddit):
     try:
         url = "https://www.reddit.com/r/{}/hot?limit=10".format(subredit)
         header = {"user-agent": "ianmax"}
-        req = get(url, headers=header, allo-redirects=false).json()
+        req = get(url, headers=header, allow_redirects=False).json()
         topTen = req["data"]["children"]
         for a in topTen:
             print(a["data"]["title"])
