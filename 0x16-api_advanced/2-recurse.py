@@ -10,7 +10,7 @@ return None.
 from requests import get
 
 
-def recurse(subreddit, hot_list=[], key):
+def recurse(subreddit, hot_list=[], key=""):
     """
     return a list of titles of hot articles
     """
